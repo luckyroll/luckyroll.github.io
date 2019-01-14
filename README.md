@@ -4,4 +4,9 @@
 - The game runs on ETH Smart Contract, rewards are automatically calculated and transferred from Smart Contract.
 - The randome function is created by a randon hash of the transaction timestamp, the block difficulty and the random _seed that is a hash provided by random players. You can change the algo anytime you want by sending a new seed to the random function.
 
+HOW TO PLAY
+
+- Connect to Metamask (Mainnet Network)
+- Play
+
 @ Proudly made by Knowchain Team.
