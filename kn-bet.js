@@ -305,9 +305,25 @@ function allowCallBack5 (isAllow) {
   }
 }
 
+function allowCallBackbig5 (isAllow) {
+  if (isAllow) {
+    PlaybigX5()
+  } else {
+    approve()
+  }
+}
+
 function allowCallBack2 (isAllow) {
   if (isAllow) {
     PlayX2()
+  } else {
+    approve()
+  }
+}
+
+function allowCallBackbig2 (isAllow) {
+  if (isAllow) {
+    PlaybigX2()
   } else {
     approve()
   }
@@ -320,8 +336,22 @@ function PlayX5 () {
   })
 };
 
+function PlaybigX5 () {
+  KNX5.PlayX5.sendTransaction({ value: 100000000000000000 }, function (err, transactionHash) {
+    if (!err)
+      console.log(transactionHash);
+  })
+};
+
 function PlayX2 () {
   KNX5.PlayX2.sendTransaction({ value: 10000000000000000 }, function (err, transactionHash) {
+    if (!err)
+      console.log(transactionHash);
+  })
+};
+
+function PlaybigX2 () {
+  KNX5.PlayX2.sendTransaction({ value: 100000000000000000 }, function (err, transactionHash) {
     if (!err)
       console.log(transactionHash);
   })
@@ -330,9 +360,17 @@ function PlayX2 () {
 function Playforfreetoken () {
   KNX5.Playforfreetoken.sendTransaction({ value: 10000000000000000 }, function (err, transactionHash) {
     if (!err)
-      console.log(transactionHash); // "0x7f9fade1c0d57a7af66ab4ead7c2eb7b11a91385"
+      console.log(transactionHash);
   })
 };
+
+function Playforbulktoken () {
+  KNX5.Playforbulktoken.sendTransaction({ value: 1000000000000000000 }, function (err, transactionHash) {
+    if (!err)
+      console.log(transactionHash);
+  })
+};
+
 
 var playevent = KNX5.PlayResult();
 playevent.watch(function (error, result) {
