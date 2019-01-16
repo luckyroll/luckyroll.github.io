@@ -371,6 +371,14 @@ function Playforbulktoken () {
   })
 };
 
+function Shake() {
+    var number = (Math.random()*1000000).toFixed(0);
+    KNX5.shake.sendTransaction(number, function (err, transactionHash) {
+    if (!err)
+      alert('You\'ve successfully changed the random algorithm!');
+  })
+};
+
 
 var playevent = KNX5.PlayResult();
 playevent.watch(function (error, result) {
